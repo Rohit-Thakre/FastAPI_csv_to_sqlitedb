@@ -3,7 +3,7 @@
 
 ## To clone this type in cmd:
 ```
-git clone https://github.com/Rohit-Thakre/FastAPI_csv_to_sqlitedb
+git clone https://github.com/Rohit-Thakre/FastAPI_csv_to_sqlitedb.git
 ```
 
 ## To run the app type in cmd: 
