@@ -32,6 +32,9 @@ async def upload_file(
     decoded_contents = contents.decode("utf-8").splitlines()
     csv_data = [line.split(",") for line in decoded_contents]
 
+    if type(csv_data[0][name_column-1]) != str or type(csv_data[0][name_column-1]) != int: 
+        return {"Error msg": 'Data type mismatch'}
+
     try: 
 
         # reading name and age from csv file
