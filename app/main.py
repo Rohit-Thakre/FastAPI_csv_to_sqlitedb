@@ -34,14 +34,17 @@ async def upload_file(
 
 
     # checking data type of before saving to db
-    if type(csv_data[0][name_column-1]) != str or type(csv_data[0][name_column-1]) != int: 
-        return {"Error msg": 'Data type mismatch'}
+    try: 
+        int((csv_data[0][age_column-1]))
+
+    except:
+        return { "Error msg" : "data type mismatch"}
 
     try: 
 
         # reading name and age from csv file
         names = [ row[name_column-1] for row in csv_data]
-        ages  = [row[age_column-1]  for row in csv_data]
+        ages  = [int(row[age_column-1])  for row in csv_data]
 
     
         # print("names : ",names)
